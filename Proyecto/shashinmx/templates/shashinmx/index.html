@@ -5,26 +5,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <link rel="stylesheet" href="{% static '/shashinmx/css/index.css' %}">
     <title>Shashin MX</title>
 </head>
 <header class='header-index'>
 <div class='logo-index'>
-    <img src='/static/elements/shashin-logo.png' alt='shashin-logo'>
+    <img src='{% static 'shashinmx/elements/shashin-logo.png' %}' alt='shashin-logo'>
 </div>
 <div class='navbar-index'>
     <nav>
         <ul>
-            <li><a href='#'>INICIO</a></li>
-            <li><a href='{% url '' %}'>GALERIA</a></li>
-            <li><a href='#'>BLOG</a></li>
-            <li><a href='#'>CONTACTO</a></li>
+            <li><a href='{% url 'index' %}'>INICIO</a></li>
+            <li><a href='{% url 'galeria' %}'>GALERIA</a></li>
+            <li><a href='{% url 'blog' %}'>BLOG</a></li>
+            <li><a href='{% url 'contacto' %}'>CONTACTO</a></li>
         </ul>
     </nav>
 </div>
 </header>
-<body>
-    <
+<body class='body-index'>
 </body>
 <footer>
 

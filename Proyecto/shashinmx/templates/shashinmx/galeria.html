@@ -1,9 +1,17 @@
-{% extends 'base.html' %}
+{% extends 'index-base.html' %}
 {% load static %}
 
 {% block title %}
-    GALERÍA
-{% enblock %}
+{% endblock %}
 
 {% block content %}
+<div class="galeria-grid">
+    {% for path_imagen in images %}
+    <figure>
+        <img src="{% static path_imagen %}" alt="Imagen de la Galería">
+    </figure>
+    {% empty %}
+    <p>No se encontraron imágenes en la galería.</p>
+    {% endfor %}
+</div>
 {% endblock %}

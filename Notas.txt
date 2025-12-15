@@ -1,0 +1,11 @@
+Pendinte: 
+    Aplicar Bootstrap 
+    Aplciar Javascript
+    Crear el Blog
+    Añadir un foooter con los datos (Nombre, escuela, redes sociales, etc.)
+
+
+Considerar: 
+    Blog para todos? 
+    Video blogs
+    Ofertas de foto (Amazon, ML, etc.)
