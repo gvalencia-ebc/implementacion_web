@@ -1,0 +1,127 @@
+@font-face {
+    font-family: 'azonix';
+    src: url(../fonts/Azonix.otf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.body-index{
+    background-image:url('../images/IMG_9262.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment:fixed;
+    background-size: cover;
+}
+
+.header-index{
+    position: static;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0;
+    display: block;
+    justify-content: center;
+}
+
+.logo-index{
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+.navbar-index{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 15px;
+}
+
+.navbar-index li{
+    display: inline-block;
+    padding: 0 15px;
+    border-right: 2px solid #ffffff;
+}
+
+.navbar-index li:last-child{
+    border-right: none;
+}
+
+.navbar-index a{
+    margin: 30px;
+    font-family: 'azonix';
+    font-size: 20px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+a:hover{
+    color: #ff913e;
+} 
+
+/* 1. ESTILOS BASE (ESCRITORIO / TABLET GRANDE) */
+
+.galeria-grid {
+    display: grid;
+    /* Por defecto (escritorio), 4 columnas. */
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 10px; 
+    padding: 10px;
+    width: 90%; /* Limita el ancho para centrar en pantallas grandes */
+    margin: 0 auto; /* Centra la galería */
+}
+
+/* Las figuras no deben tener altura fija para que Masonry funcione */
+.galeria-grid figure {
+    height: auto; 
+    margin: 0; 
+    overflow: hidden; 
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* CRÍTICO: Asegura que la celda se adapte a la altura de la imagen */
+    align-self: start; 
+}
+
+/* La imagen debe ocupar el 100% del ancho de la columna */
+.galeria-grid figure img {
+    width: 100%;  
+    height: auto; /* Mantiene la proporción original */
+    object-fit: contain; 
+    display: block; 
+}
+
+
+/* 2. MEDIA QUERY PARA TABLETS (ANCHO MÁXIMO DE 992px) */
+/* Si la pantalla es más pequeña que 992px, reducimos a 3 columnas */
+@media (max-width: 992px) {
+    .galeria-grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 Columnas */
+    }
+}
+
+
+/* 3. MEDIA QUERY PARA MÓVILES (ANCHO MÁXIMO DE 768px) */
+/* Si la pantalla es más pequeña que 768px, reducimos a 2 columnas */
+@media (max-width: 768px) {
+    .galeria-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 Columnas */
+        padding: 5px;
+        gap: 5px;
+    }
+}
+
+
+/* 4. MEDIA QUERY PARA MÓVILES PEQUEÑOS (ANCHO MÁXIMO DE 576px) */
+/* Si la pantalla es muy pequeña, dejamos 1 sola columna para facilitar la lectura */
+@media (max-width: 576px) {
+    .galeria-grid {
+        grid-template-columns: 1fr; /* 1 Columna */
+        gap: 15px;
+    }
+}
