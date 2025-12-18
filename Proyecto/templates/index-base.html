@@ -5,13 +5,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     {% block title %}
     {% endblock %}
 </head>
 <header class="header-index">
     <div class="logo-index">
         <link rel="stylesheet" href="{% static '/shashinmx/css/index.css' %}">
-        <img src="{% static 'shashinmx/elements/shashin-logo.png' %}" alt='shashin-logo'>
+        <img src="{% static 'shashinmx/elements/shashin-logo-white.png' %}" href ="{% url 'index' %}" alt='shashin-logo'>
     </div>
     <div class="navbar-index">
         <nav>
@@ -27,8 +28,35 @@
 <body>
     {% block content %}
     {% endblock %}
+    <hr class="footer-line">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
-<footer>
-
+<footer class="footer-container">
+    <div class="footer-column">
+        <ul>
+            <li><a href="{% url 'index' %}">INICIO</a></li>
+            <li><a href="{% url 'galeria' %}">GALERIA</a></li>
+            <li><a href="{% url 'blog' %}">BLOG</a></li>
+            <li><a href="{% url 'contacto' %}">CONTACTO</a></li>
+            <li><a>2025 Shashin Mx. Todos los derechos reservados.</a></li>
+        </ul>
+    </div>
+    <div class="footer-column">
+        <ul>
+            <li><h5>Legal y Soporte</h5></li>
+            <li>Política de Privacidad</li>
+            <li>Términos de Uso</li>
+            <li>Preguntas Frecuentes</li>
+            <li>Mapa del Sitio</li>
+        </ul>
+    </div>
+    <div class="footer-column">
+        <ul>
+            <li><h5>Contacto y Social</h5></li>
+            <li>Contacto:   phshashin@gmail.com</li>
+            <li>Querétaro, México.</li>
+            <li>Sigueme en mi Instagram: <a href="https://www.instagram.com/holayosoygera/">@holayosoygera</a></li>
+        </ul>
+    </div>
 </footer>
 </html>

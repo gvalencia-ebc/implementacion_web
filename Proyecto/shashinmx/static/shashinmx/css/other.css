@@ -9,8 +9,15 @@
     box-sizing: border-box;
 }
 
+.container{
+    display: grid;
+    margin: 0;
+    padding: 0;
+
+}
+
 .header-other{
-    position: fixed;
+    position: static;
     align-items: center;
     top: 0;
     left: 0;

@@ -9,3 +9,5 @@ Considerar:
     Blog para todos? 
     Video blogs
     Ofertas de foto (Amazon, ML, etc.)
+
+

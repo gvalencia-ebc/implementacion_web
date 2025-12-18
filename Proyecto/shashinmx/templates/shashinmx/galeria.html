@@ -6,12 +6,13 @@
 
 {% block content %}
 <div class="galeria-grid">
-    {% for path_imagen in images %}
-    <figure>
-        <img src="{% static path_imagen %}" alt="Imagen de la Galería">
+    {% for item in images %}
+    <figure class="{% if item.is_wide %} horizontal span{% endif %}">
+        <img class="img-fluid bd-placeholder-img" src="{% static item.path %}" alt="Imagen de la Galería">
     </figure>
     {% empty %}
     <p>No se encontraron imágenes en la galería.</p>
     {% endfor %}
 </div>
 {% endblock %}
+
